@@ -1,0 +1,14 @@
+1db242,::1,GET,http://localhost/bibliotheque/web/app_dev.php/register,1528467450,,301
+fbbb2b,::1,GET,http://localhost/bibliotheque/web/app_dev.php/register/,1528467451,,200
+a55c8c,::1,POST,http://localhost/bibliotheque/web/app_dev.php/register/,1528469266,,302
+258db2,::1,GET,http://localhost/bibliotheque/web/app_dev.php/register/confirmed,1528469266,,200
+0f02b8,::1,GET,http://localhost/bibliotheque/web/app_dev.php/register/,1528469435,,200
+0a6816,::1,GET,http://localhost/bibliotheque/web/app_dev.php/register/,1528469567,,200
+b282fd,::1,GET,http://localhost/bibliotheque/web/app_dev.php/logout,1528469573,,302
+9c3719,::1,GET,http://localhost/bibliotheque/web/app_dev.php/,1528469573,,200
+6219fb,::1,GET,http://localhost/bibliotheque/web/app_dev.php/,1528469578,,200
+07c47c,::1,GET,http://localhost/bibliotheque/web/app_dev.php/register,1528469582,,301
+3729f4,::1,GET,http://localhost/bibliotheque/web/app_dev.php/register/,1528469582,,200
+a84f25,::1,GET,http://localhost/bibliotheque/web/app_dev.php/login,1528469586,,200
+4273b2,::1,POST,http://localhost/bibliotheque/web/app_dev.php/login_check,1528469591,,302
+9ebb2b,::1,GET,http://localhost/bibliotheque/web/app_dev.php/login,1528469591,,200

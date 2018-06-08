@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: MA_COMMUNE
+    database_user: root
+    database_password: tafatene10
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: tenetafa@gmail.com
+    mailer_password: halawi10
+    secret: 1c5278a26c5d820fdb5853a81e01538ca641da90

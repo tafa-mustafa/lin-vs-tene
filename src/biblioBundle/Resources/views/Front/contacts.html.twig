@@ -1,0 +1,77 @@
+{% extends '@biblio/home.html.twig' %}
+
+
+{% block slider %}
+{% endblock %}
+{% block global %}
+
+
+<div class="global indent">
+    <!--content-->
+    <div class="container">
+        <div class="row">
+            <article class="col-lg-12 col-md-12 col-sm-12 contactBox">
+                <figure class="map">
+                    <iframe src=""><img src="{{ asset ('img/I.jpg') }}" alt=""></iframe>
+                </figure>
+            </article>
+        </div>
+    </div>
+    <section class="formBox">
+        <div class="container">
+            <div class="row">
+                <article class="col-lg-4 col-md-4 col-sm-4">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">entrer en contact</font></font></h3>
+                    <div class="info">
+                        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adresse 1:</font></font></h4>
+                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8901 Marmora Road, Glasgow, D04 89GR.</font></font></p>
+                        <h4 class="tel"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téléphones:</font></font></h4>
+                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+1 800 559 6580 </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+1 959 603 6035 </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+1 504 889 9898</font></font></p>
+                        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adresse 2:</font></font></h4>
+                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9867 Mill Road, Cambridge, MG09 99HT.</font></font></p>
+                    </div>
+                </article>
+                <article class="col-lg-8 col-md-8 col-sm-8">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Formulaire de contact</font></font></h3>
+                    <form id="contact-form">
+                        <div class="success-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Formulaire de contact soumis.</font></font></div>
+                        <div class="holder">
+                            <div class="form-div-1 clearfix">
+                                <label class="name">
+                                    <input type="text" data-constraints="@Required @JustLetters" id="regula-generated-55879">
+                                    <span class="empty-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*Ce champ est requis. </font></font></span>
+                                    <span class="error-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">* Ce n'est pas un nom valide.</font></font></span>
+                                    <span class="_placeholder" style="left: 0px; top: 0px; width: 212px; height: 41px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prénom:</font></font></span></label>
+                            </div>
+                            <div class="form-div-2 clearfix">
+                                <label class="email">
+                                    <input type="text" data-constraints="@Required @Email" id="regula-generated-925288">
+                                    <span class="empty-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*Ce champ est requis. </font></font></span>
+                                    <span class="error-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">* Ceci n'est pas un email valide.</font></font></span>
+                                    <span class="_placeholder" style="left: 0px; top: 0px; width: 212px; height: 41px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email:</font></font></span></label>
+                            </div>
+                            <div class="form-div-3 clearfix">
+                                <label class="phone notRequired">
+                                    <input type="text" data-constraints="@JustNumbers" id="regula-generated-726327">
+                                    <span class="empty-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*Ce champ est requis. </font></font></span>
+                                    <span class="error-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">* Ce n'est pas un téléphone valide.</font></font></span>
+                                    <span class="_placeholder" style="left: 0px; top: 0px; width: 212px; height: 41px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Téléphone:</font></font></span></label>
+                            </div>
+                        </div>
+                        <div class="form-div-4 clearfix">
+                            <label class="message">
+                                <textarea data-constraints="@Required @Length(min=20,max=999999)" id="regula-generated-842245"></textarea>
+                                <span class="empty-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*Ce champ est requis. </font></font></span>
+                                <span class="error-message"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">* Le message est trop court.</font></font></span>
+                                <span class="_placeholder" style="left: 0px; top: 0px; width: 740px; height: 201px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Message:</font></font></span></label>
+                        </div>
+                        <div class="btns">
+                            <a href="https://livedemo00.template-help.com/wt_48292/index-4.html#" data-type="submit" class="btn-default btn1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">soumettre</font></font></a>
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
