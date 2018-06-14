@@ -18,7 +18,7 @@ class adminController extends Controller
     }
     
     /**
-     * @Route("/admin/add")
+     * @Route("/add", name="ajouter")
      */
     public function addAction()
     {
@@ -28,7 +28,7 @@ class adminController extends Controller
     }
 
     /**
-     * @Route("/admin/list")
+     * @Route("/list" , name="list")
      */
     public function listAction()
     {

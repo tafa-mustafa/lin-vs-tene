@@ -3,11 +3,93 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+
+        <link href="{{ asset('assets/plugins/sweetalert/dist/sweetalert.css')}}" rel="stylesheet" type="text/css">
+
+        <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/core.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/components.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/pages.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/menu.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('assets/css/responsive.css')}}" rel="stylesheet" type="text/css">
+
+        <script src="assets/js/modernizr.min.js"></script>
+
+        <link rel="stylesheet" href="{{ asset('css/onglet/bootstrap.min.css') }}" />
+        <script src="{{ asset('js/onglet/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/onglet/bootstrap.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+
+        <script>
+            var resizefunc = [];
+        </script>
+
+        <!-- jQuery  -->
+        <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
+        <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+        <script src="{{ asset('assets/js/detect.js')}}"></script>
+        <script src="{{ asset('assets/js/fastclick.js')}}"></script>
+        <script src="{{ asset('assets/js/jquery.slimscroll.js')}}"></script>
+        <script src="{{ asset('assets/js/jquery.blockUI.js')}}"></script>
+        <script src="{{ asset('assets/js/waves.js')}}"></script>
+        <script src="{{ asset('assets/js/wow.min.js')}}"></script>
+        <script src="{{ asset('assets/js/jquery.nicescroll.js')}}"></script>
+        <script src="{{ asset('assets/js/jquery.scrollTo.min.js')}}"></script>
+
+        <script src="{{ asset('assets/js/jquery.app.js')}}"></script>
+        
+        <!-- jQuery  -->
+        <script src="{{ asset('assets/plugins/moment/moment.js')}}"></script>
+        
+        <!-- jQuery  -->
+        <script src="{{ asset('assets/plugins/waypoints/lib/jquery.waypoints.js')}}"></script>
+        <script src="{{ asset('assets/plugins/counterup/jquery.counterup.min.js')}}"></script>
+        
+        <!-- jQuery  -->
+        <script src="{{ asset('assets/plugins/sweetalert/dist/sweetalert.min.js')}}"></script>
+        
+        
+        <!-- flot Chart -->
+        <script src="{{ asset('assets/plugins/flot-chart/jquery.flot.js')}}"></script>
+        <script src="{{ asset('assets/plugins/flot-chart/jquery.flot.time.js')}}"></script>
+        <script src="{{ asset('assets/plugins/flot-chart/jquery.flot.tooltip.min.js')}}"></script>
+        <script src="{{ asset('assets/plugins/flot-chart/jquery.flot.resize.js')}}"></script>
+        <script src="{{ asset('assets/plugins/flot-chart/jquery.flot.pie.js')}}"></script>
+        <script src="{{ asset('assets/plugins/flot-chart/jquery.flot.selection.js')}}"></script>
+        <script src="{{ asset('assets/plugins/flot-chart/jquery.flot.stack.js')}}"></script>
+        <script src="{{ asset('assets/plugins/flot-chart/jquery.flot.crosshair.js')}}"></script>
+
+        <!-- jQuery  -->
+        <script src="{{ asset('assets/pages/jquery.todo.js')}}"></script>
+        
+        <!-- jQuery  -->
+        <script src="{{ asset('assets/pages/jquery.chat.js')}}"></script>
+        
+        <!-- jQuery  -->
+        <script src="{{ asset('assets/pages/jquery.dashboard.js')}}"></script>
+        
+        <script type="text/javascript">
+            /* ==============================================
+            Counter Up
+            =============================================== */
+            jQuery(document).ready(function($) {
+                $('.counter').counterUp({
+                    delay: 100,
+                    time: 1200
+                });
+            });
+        </script>
+    
+        {% endblock %}
     </body>
 </html>

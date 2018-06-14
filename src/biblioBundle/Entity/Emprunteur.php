@@ -35,13 +35,12 @@ class Emprunteur
      */
     private $telephone;
 
-     /** 
-     * @ORM\ManyToOne(targetEntity="biblioBundle\Entity\Reservation")
-     * @ORM\JoinColumn(nullable=false)
-    */
-    private $Reservation;
-
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adress", type="string", length=38)
+     */
+    private $adress;
 
     /**
      * Get id
@@ -103,22 +102,27 @@ class Emprunteur
 
     
 
+
     /**
-     * Get the value of Reservation
+     * Get the value of adress
+     *
+     * @return  string
      */ 
-    public function getReservation()
+    public function getAdress()
     {
-        return $this->Reservation;
+        return $this->adress;
     }
 
     /**
-     * Set the value of Reservation
+     * Set the value of adress
+     *
+     * @param  string  $adress
      *
      * @return  self
      */ 
-    public function setReservation($Reservation)
+    public function setAdress(string $adress)
     {
-        $this->Reservation = $Reservation;
+        $this->adress = $adress;
 
         return $this;
     }

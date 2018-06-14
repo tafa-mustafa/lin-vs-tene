@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Emprunteurs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Telephone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for emprunteur in emprunteurs %}
+            <tr>
+                <td><a href="{{ path('emprunteur_show', { 'id': emprunteur.id }) }}">{{ emprunteur.id }}</a></td>
+                <td>{{ emprunteur.nom }}</td>
+                <td>{{ emprunteur.telephone }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('emprunteur_show', { 'id': emprunteur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('emprunteur_edit', { 'id': emprunteur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('emprunteur_new') }}">Create a new emprunteur</a>
+        </li>
+    </ul>
+{% endblock %}

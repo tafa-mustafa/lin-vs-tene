@@ -28,6 +28,12 @@ class Reservation
      */
     private $date;
 
+     /** 
+     * @ORM\ManyToOne(targetEntity="biblioBundle\Entity\Reservation")
+     * @ORM\JoinColumn(nullable=false)
+    */
+    private $Emprunteur;
+
 
 
     /**
@@ -65,5 +71,25 @@ class Reservation
     }
 
    
+
+    /**
+     * Get the value of Emprunteur
+     */ 
+    public function getEmprunteur()
+    {
+        return $this->Emprunteur;
+    }
+
+    /**
+     * Set the value of Emprunteur
+     *
+     * @return  self
+     */ 
+    public function setEmprunteur($Emprunteur)
+    {
+        $this->Emprunteur = $Emprunteur;
+
+        return $this;
+    }
 }
 

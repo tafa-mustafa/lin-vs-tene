@@ -116,13 +116,13 @@
     <parameter key="mailer_user">tenetafa@gmail.com</parameter>
     <parameter key="mailer_password">halawi10</parameter>
     <parameter key="secret">1c5278a26c5d820fdb5853a81e01538ca641da90</parameter>
-    <parameter key="locale">en</parameter>
+    <parameter key="locale">fr</parameter>
     <parameter key="fragment.renderer.hinclude.global_template"></parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">1c5278a26c5d820fdb5853a81e01538ca641da90</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">fr</parameter>
     <parameter key="templating.helper.code.file_link_format">null</parameter>
     <parameter key="debug.file_link_format">null</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
@@ -625,7 +625,7 @@
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
       <argument type="service" id="request_stack"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
     </service>
     <service id="http_exception_listener" class="Symfony\Component\HttpKernel\EventListener\ExceptionListener" public="false">
@@ -838,7 +838,7 @@
       <argument type="service" id="translation.writer"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument>/var/www/html/bibliotheque/translations</argument>
       <argument>/var/www/html/bibliotheque/templates</argument>
       <call method="setName">
@@ -1360,7 +1360,7 @@
     <service id="translator.default" class="Symfony\Bundle\FrameworkBundle\Translation\Translator">
       <argument type="service" id="service_locator.yepb.pt"/>
       <argument type="service" id="translator.formatter.default"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="collection">
         <argument key="translation.loader.php" type="collection">
           <argument>php</argument>
@@ -2384,14 +2384,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -3592,12 +3584,12 @@
       <argument type="collection">
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
+        <argument key="cache">false</argument>
         <argument key="exception_controller">twig.controller.exception:showAction</argument>
         <argument key="form_themes" type="collection">
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">/var/www/html/bibliotheque/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="default_path">/var/www/html/bibliotheque/templates</argument>
         <argument key="paths" type="collection"/>
@@ -3761,6 +3753,10 @@
       <call method="addPath">
         <argument>/var/www/html/bibliotheque/src/biblioBundle/Resources/views</argument>
         <argument>!biblio</argument>
+      </call>
+      <call method="addPath">
+        <argument>/var/www/html/bibliotheque/app/Resources/FOSUserBundle/views</argument>
+        <argument>FOSUser</argument>
       </call>
       <call method="addPath">
         <argument>/var/www/html/bibliotheque/vendor/friendsofsymfony/user-bundle/Resources/views</argument>

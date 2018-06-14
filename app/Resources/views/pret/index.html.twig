@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Prets list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pret in prets %}
+            <tr>
+                <td><a href="{{ path('pret_show', { 'id': pret.id }) }}">{{ pret.id }}</a></td>
+                <td>{% if pret.date %}{{ pret.date|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('pret_show', { 'id': pret.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('pret_edit', { 'id': pret.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('pret_new') }}">Create a new pret</a>
+        </li>
+    </ul>
+{% endblock %}
